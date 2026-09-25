@@ -12,7 +12,7 @@ export const GET = handle<{ params: Promise<{ id: string }> }>(async (request, {
   const document = await store().get('documents', id)
   if (!document?.storagePath) fail(404, 'Document not found')
   const url = await signedDocumentUrl(document!.storagePath)
-  if (!url) fail(501, 'Document previews are unavailable in demo mode.')
+  if (!url) fail(501, 'Document preview is not available right now.')
   await audit(staff, 'document.view', id)
   return { url }
 })

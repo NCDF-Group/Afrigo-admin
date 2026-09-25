@@ -12,7 +12,7 @@ const owners = () =>
     .map(email => email.trim().toLowerCase())
     .filter(Boolean)
 
-export const DEMO_STAFF: Staff = { uid: 'demo-operator', email: 'operator@afrigo.demo', name: 'Demo operator', role: 'super_admin' }
+export const DEMO_STAFF: Staff = { uid: 'afrigo-operator', email: 'operator@afrigo.africa', name: 'Afrigo Operator', role: 'super_admin' }
 
 export async function requireStaff(request: Request, capability?: Capability): Promise<Staff> {
   if (DEMO_MODE) return DEMO_STAFF

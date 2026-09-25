@@ -63,7 +63,7 @@ export async function pushToTokens(tokens: string[], message: { title: string; b
 export async function paystackRefund(input: { reference: string; amount: number; currency: string; note: string }) {
   if (DEMO_MODE) return { id: `demo-refund-${Date.now()}` }
   const secret = process.env.PAYSTACK_SECRET_KEY
-  if (!secret) fail(503, 'The refund provider is not configured.')
+  if (!secret) fail(503, 'Refunds are temporarily unavailable. Please try again later.')
   const response = await fetch('https://api.paystack.co/refund', {
     method: 'POST',
     headers: { Authorization: `Bearer ${secret}`, 'Content-Type': 'application/json' },

@@ -78,8 +78,7 @@ export default function SignInPage() {
           <p className="mt-1.5 text-sm text-muted">Use the Afrigo account that has been granted an operational role.</p>
 
           {DEMO_MODE ? (
-            <div className="mt-8 space-y-4">
-              <p className="rounded-xl border border-warning/30 bg-warning-soft p-3.5 text-sm text-warning">Demo mode is on. The console runs on generated data and no sign in is required.</p>
+            <div className="mt-8">
               <Button variant="primary" className="w-full" onClick={() => router.replace('/')}>
                 Open the console <ArrowRight className="h-4 w-4" />
               </Button>
@@ -100,7 +99,7 @@ export default function SignInPage() {
               </Field>
               {error ? <p className="rounded-xl bg-danger-soft px-3.5 py-2.5 text-sm text-danger">{error}</p> : null}
               {notice ? <p className="rounded-xl bg-success-soft px-3.5 py-2.5 text-sm text-success">{notice}</p> : null}
-              {unavailable ? <p className="rounded-xl bg-warning-soft px-3.5 py-2.5 text-sm text-warning">Firebase keys are missing. Add them to .env.local or enable demo mode.</p> : null}
+              {unavailable ? <p className="rounded-xl bg-warning-soft px-3.5 py-2.5 text-sm text-warning">Sign in is not available right now. Please try again later.</p> : null}
               <Button type="submit" variant="primary" className="w-full" loading={busy} disabled={unavailable}>
                 Sign in
               </Button>

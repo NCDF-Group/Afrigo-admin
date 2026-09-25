@@ -2,11 +2,9 @@
 import { Menu, Search, ShieldAlert } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { DEMO_MODE } from '@/lib/env'
 import { LiveProvider } from '@/lib/client/live'
 import { useSession } from '@/lib/client/session'
 import { cn } from '@/lib/cn'
-import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { CommandMenu } from './command-menu'
 import { LiveIndicator } from './live-indicator'
@@ -103,11 +101,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <kbd className="rounded-md border border-line bg-subtle px-1.5 text-[11px] font-semibold">⌘K</kbd>
             </button>
             <div className="ml-auto flex items-center gap-2">
-              {DEMO_MODE ? (
-                <Badge tone="warning" className="hidden md:inline-flex">
-                  Demo data
-                </Badge>
-              ) : null}
               <Button variant="ghost" size="icon" className="sm:hidden" onClick={() => setCommand(true)} aria-label="Search">
                 <Search className="h-5 w-5" />
               </Button>

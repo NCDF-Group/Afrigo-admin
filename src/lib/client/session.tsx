@@ -43,7 +43,7 @@ export function SessionProvider({ children }: { children: React.ReactNode }) {
     }
     if (!auth) {
       setStatus('signed-out')
-      setError('Firebase is not configured for this console.')
+      setError('Sign in is not available right now. Please try again later.')
       return
     }
     return onIdTokenChanged(auth, user => {

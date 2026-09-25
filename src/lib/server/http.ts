@@ -26,7 +26,7 @@ export function handle<C = unknown>(handler: (request: Request, context: C) => P
     } catch (error) {
       if (error instanceof HttpError) return Response.json({ ok: false, error: error.message }, { status: error.status })
       console.error(error)
-      return Response.json({ ok: false, error: error instanceof Error ? error.message : 'Server error' }, { status: 500 })
+      return Response.json({ ok: false, error: 'Something went wrong. Please try again.' }, { status: 500 })
     }
   }
 }

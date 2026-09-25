@@ -73,7 +73,7 @@ export function demoSeed(): Record<string, Doc[]> {
       appVersion: userPlatform === 'web' ? null : pick(['2.4.0', '2.4.1', '2.5.0', '2.5.0', '2.5.2']),
       status: random() < 0.03 ? 'suspended' : 'active',
       lastActiveAt: now - Math.floor(Math.pow(random(), 3) * 20 * DAY),
-      notificationTokens: random() < 0.7 ? [`demo-token-${id}`] : [],
+      notificationTokens: random() < 0.7 ? [`token-${id}`] : [],
       createdAt,
       updatedAt: createdAt
     })
