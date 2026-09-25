@@ -35,7 +35,7 @@ const FLAGS: { key: string; label: string; description: string }[] = [
   { key: 'marketplace', label: 'Marketplace', description: 'Browse listings, post requests and place bids' },
   { key: 'chat', label: 'Trade chat', description: 'Messaging between buyers, sellers and exporters' },
   { key: 'payments', label: 'Payments and escrow', description: 'Pay for trades inside Afrigo' },
-  { key: 'liveTracking', label: 'Live shipment tracking', description: 'Milestones and carrier tracking' },
+  // { key: 'liveTracking', label: 'Live shipment tracking', description: 'Milestones and carrier tracking' },
   { key: 'imageSearch', label: 'Image search', description: 'Find products by photo' }
 ]
 

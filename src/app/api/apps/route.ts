@@ -7,7 +7,7 @@ import { store } from '@/lib/server/store'
 export const dynamic = 'force-dynamic'
 
 const VERSION = /^\d+\.\d+\.\d+$/
-const FLAGS = ['payments', 'chat', 'marketplace', 'imageSearch', 'liveTracking'] as const
+const FLAGS = ['payments', 'chat', 'marketplace', 'imageSearch' /* , 'liveTracking' */] as const
 const TONES = ['info', 'success', 'warning', 'danger']
 
 const DEFAULT_CONFIG = {
@@ -18,7 +18,7 @@ const DEFAULT_CONFIG = {
   maintenanceMessage: '',
   storeUrl: '',
   banner: { enabled: false, text: '', tone: 'info', link: '' },
-  flags: { payments: false, chat: true, marketplace: true, imageSearch: false, liveTracking: true }
+  flags: { payments: false, chat: true, marketplace: true, imageSearch: false /* , liveTracking: false */ }
 }
 
 export const GET = handle(async request => {

@@ -83,7 +83,7 @@ Remote configuration lives in `appConfig/{web|ios|android}`:
   "maintenanceMessage": "",
   "storeUrl": "https://play.google.com/store/apps/details?id=africa.afrigo",
   "banner": { "enabled": false, "text": "", "tone": "info", "link": "" },
-  "flags": { "payments": false, "chat": true, "marketplace": true, "imageSearch": false, "liveTracking": true }
+  "flags": { "payments": false, "chat": true, "marketplace": true, "imageSearch": false }
 }
 ```
 
